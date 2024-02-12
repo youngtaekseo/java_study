@@ -18,10 +18,12 @@ public class FileReadWrite {
 
 	public static void main(String[] args) {
 		String str = "동해물과 백두산이\n마르고 닳도록";
+		byte[] bt = {'a', 'b'};
 		
 		// 파일쓰기-1		
 		try (Writer wr = new FileWriter("test.txt")) {
 			wr.write(str);
+			wr.flush();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -33,6 +35,7 @@ public class FileReadWrite {
 			) 
 		{
 			bw.write(str);
+			bw.flush();
 		} catch (Exception e) {
 			// TODO: handle exception
 		}		
@@ -43,7 +46,20 @@ public class FileReadWrite {
 			 BufferedOutputStream bos = new BufferedOutputStream(fos);			 
 			) 
 		{
-			bos.write(0);
+			bos.write(bt);
+			bos.write('\n');
+			bos.write('1');
+			bos.flush();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		// 파일쓰기-4
+		try (Writer wt = new FileWriter("test4.txt");
+			 BufferedWriter bw = new BufferedWriter(wt);
+			) 
+		{
+			bw.write(str);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
