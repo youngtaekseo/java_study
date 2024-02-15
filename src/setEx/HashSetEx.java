@@ -59,8 +59,9 @@ public class HashSetEx {
 		set.add(new Person(80, "김민재"));
 		
 		Iterator ir = set.iterator();
+		Person ps = null;
 		while(ir.hasNext()) {
-			Person ps = (Person) ir.next();
+			ps = (Person) ir.next();
 			System.out.println(ps.toString());
 		}
 	}
