@@ -26,6 +26,6 @@ public class Subject {
 
 	@Override
 	public String toString() {
-		return "국어:" + kor + "\t 영어:" + eng + "\t 수학:" + mat;
+		return kor + "\t" + eng + "\t" + mat;
 	}
 }

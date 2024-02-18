@@ -15,7 +15,7 @@ public class StudentTest {
 		stList.add(student);
 		
 		student = new Student("Tiffany");
-		student.addSubject(90, 80, 92);
+		student.addSubject(90, 98, 80);
 		stList.add(student);
 		
 		student = new Student("Jennifer");
@@ -25,10 +25,10 @@ public class StudentTest {
 		// 정렬
 		Collections.sort(stList);
 		
-		// 과목별 등수
+		// 등수계산
 		student.calcRank(stList);	
 		
-		// 출력
+		// 성적출력
 		student.printScore(stList);
 	}
 }
